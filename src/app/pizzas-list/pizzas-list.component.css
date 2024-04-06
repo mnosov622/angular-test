@@ -1,0 +1,20 @@
+.pizzas-list {
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.pizzas-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+.pizzas-list-title {
+  color: #bd985c;
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 65px;
+}

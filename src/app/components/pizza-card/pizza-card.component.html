@@ -1,0 +1,16 @@
+<div class="pizza-card">
+  <img
+    class="pizza-img"
+    [src]="'../../../assets/img/' + pizzaImage + '.jpg'"
+    alt="pizza"
+    (click)="openFullscreen(pizzaImage)"
+  />
+  <div class="about-pizza">
+    <h3 class="pizza-name">{{ title }}</h3>
+    <p class="pizza-description">
+      {{ description }}
+    </p>
+  </div>
+
+  <button class="add-to-card-btn">В корзину</button>
+</div>

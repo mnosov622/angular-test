@@ -1,0 +1,79 @@
+<div class="order-form-container">
+  <div class="order-info">
+    <h3 class="order-form-title">Хватит думать!</h3>
+    <h3 class="order-form-dark-title">Доставим заказ за 30 минут!</h3>
+    <p class="order-form-policy">
+      Мы гарантированно доставим вашу пиццу за 30 минут с момента оформления
+      заказа. Если мы опоздаем даже на 1 минуту - вы получаете весь заказ
+      бесплатно и ваучер на скидку на следующий заказ. Мы гордимся нашим
+      сервисом и сделаем всё, чтобы наш клиент был доволен и не остался
+      голодный!
+    </p>
+  </div>
+  <div class="order-form">
+    <form
+      class="order-form-form"
+      [formGroup]="orderForm"
+      (ngSubmit)="onSubmit()"
+    >
+      <input
+        type="text"
+        class="order-form-input"
+        placeholder="Ваше имя"
+        (keypress)="preventDot($event)"
+        formControlName="name"
+      />
+      <div
+        *ngIf="
+          orderForm.controls['name'].touched &&
+          orderForm.controls['name'].invalid
+        "
+        class="order-form-error"
+      >
+        Name is required
+      </div>
+
+      <input
+        type="text"
+        class="order-form-input"
+        placeholder="Адрес доставки"
+        formControlName="address"
+      />
+      <div
+        *ngIf="
+          orderForm.controls['address'].touched &&
+          orderForm.controls['address'].invalid
+        "
+        class="order-form-error"
+      >
+        Address is required
+      </div>
+
+      <input
+        type="text"
+        class="order-form-input"
+        placeholder="Телефон"
+        formControlName="phone"
+        (keypress)="onlyNumberKey($event)"
+      />
+      <div
+        *ngIf="
+          orderForm.controls['phone'].touched &&
+          orderForm.controls['phone'].invalid
+        "
+        class="order-form-error"
+      >
+        Phone is required and must be valid
+      </div>
+
+      <button class="order-form-btn">Оформить заказ</button>
+    </form>
+  </div>
+  <div class="order-form-pizza-container">
+    <img
+      class="order-form-pizza"
+      src="../../assets/img/order-form-pizza.jpg"
+      alt="pizza"
+    />
+  </div>
+</div>

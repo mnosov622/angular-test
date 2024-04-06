@@ -1,0 +1,12 @@
+<div class="pizzas-list">
+  <h3 class="pizzas-list-title">Выберите свою любимую пиццу</h3>
+  <div class="pizzas-cards">
+    <ng-container *ngFor="let pizza of pizzas">
+      <app-pizza-card
+        [title]="pizza.title"
+        [description]="pizza.description"
+        [pizzaImage]="pizza.pizzaImage"
+      ></app-pizza-card>
+    </ng-container>
+  </div>
+</div>

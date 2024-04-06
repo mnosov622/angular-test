@@ -1,0 +1,69 @@
+.hero {
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.best-pizza {
+  color: #b99150;
+  font-size: 45px;
+  font-weight: 800;
+  max-width: 800px;
+}
+
+.flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.yellow-highlight {
+  color: #ffaf18;
+}
+
+.qualities {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 800px;
+}
+
+.quality {
+  max-width: 320px;
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 50px;
+}
+
+.quality-info {
+  margin-left: 20px;
+}
+
+.quality-title {
+  color: #ffaf18;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.quality-description {
+  color: #b99150;
+  font-size: 16px;
+}
+
+.choose-pizza-btn {
+  background-color: #ffaf18;
+  color: #382400;
+  padding: 15px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 800;
+  margin-top: 20px;
+  width: 224px;
+  transition: all 0.3s;
+}
+
+.choose-pizza-btn:hover {
+  background-color: #ffc468;
+}
