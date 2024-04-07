@@ -6,11 +6,26 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#">Пиццы</a></li>
+        <li><a href="#pizzas-list">Пиццы</a></li>
         <li><a href="#">Напитки</a></li>
         <li><a href="#">Доставка и Оплата</a></li>
         <li><a href="#">Контакты</a></li>
       </ul>
     </nav>
+  </div>
+  <div class="hamburger-menu" (click)="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="mobile-menu nav" [class.open]="isMenuOpen">
+    <div class="close-mark" (click)="toggleMenu()">&times;</div>
+    <ul class="mobile-nav-list">
+      <li><a href="#pizzas-list">Пиццы</a></li>
+      <li><a href="#">Напитки</a></li>
+      <li><a href="#">Доставка и Оплата</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
   </div>
 </header>
