@@ -67,6 +67,7 @@ export class OrderFormComponent {
       .subscribe(
         (response) => {
           window.alert('Спасибо за заказ');
+          this.orderForm.reset();
         },
         (error) => {
           console.error(error);
