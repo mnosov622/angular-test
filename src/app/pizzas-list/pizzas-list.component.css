@@ -1,6 +1,7 @@
 .pizzas-list {
   max-width: 1300px;
   margin: 0 auto;
+  padding: 0 20px;
   margin-top: 100px;
 }
 
@@ -17,4 +18,25 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 65px;
+}
+
+@media screen and (max-width: 1280px) {
+  .pizzas-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .pizzas-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pizzas-cards {
+    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

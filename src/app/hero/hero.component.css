@@ -73,6 +73,7 @@
 @media screen and (max-width: 1200px) {
   .hero {
     text-align: center;
+    margin-top: 50px;
   }
   .flex-wrapper {
     justify-content: center;
